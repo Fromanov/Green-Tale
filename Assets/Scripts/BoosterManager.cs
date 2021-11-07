@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class BoosterManager : MonoBehaviour  
+public class BoosterManager : MonoBehaviour
 {
     public bool isBoosterPressed;
     public BoosterType boosterType;
@@ -28,7 +28,7 @@ public class BoosterManager : MonoBehaviour
         gameData = FindObjectOfType<GameData>();
 
         UpdateBusterValue();
-    }    
+    }
 
     public void BoosterClick()
     {
@@ -40,43 +40,45 @@ public class BoosterManager : MonoBehaviour
 
     public void Update()
     {
-        if(isBoosterPressed == false)
+        if (isBoosterPressed == false)
         {
             busterAnimatorColorBomb.SetBool("isActive", false);
             busterAnimatorGloves.SetBool("isActive", false);
             busterAnimatorWateringCan.SetBool("isActive", false);
             busterAnimatorShowel.SetBool("isActive", false);
-        }        
+        }
     }
 
     public void DeleteSingleButtonPress()
     {
         busterAnimatorShowel.SetBool("isActive", true);
 
-        if(gameData.saveData.busterValue[0] > 0)
+        if (gameData.saveData.busterValue[0] > 0)
         {
             if (board.currentState == GameState.move)
             {
                 boosterType = BoosterType.DeleteSingle;
                 gameData.saveData.busterValue[0]--;
+                gameData.Save();
                 BoosterClick();
             }
-        }        
+        }
     }
 
     public void DeleteRowButtonPress()
     {
         busterAnimatorWateringCan.SetBool("isActive", true);
 
-        if(gameData.saveData.busterValue[2] > 0)
+        if (gameData.saveData.busterValue[2] > 0)
         {
             if (board.currentState == GameState.move)
             {
                 boosterType = BoosterType.DeleteRow;
                 gameData.saveData.busterValue[2]--;
+                gameData.Save();
                 BoosterClick();
             }
-        }        
+        }
     }
 
     public void DeleteColumnButtonPress()
@@ -89,24 +91,26 @@ public class BoosterManager : MonoBehaviour
             {
                 boosterType = BoosterType.DeleteColumn;
                 gameData.saveData.busterValue[1]--;
+                gameData.Save();
                 BoosterClick();
             }
-        }        
+        }
     }
 
     public void TransformColorBombButtonPress()
     {
         busterAnimatorColorBomb.SetBool("isActive", true);
 
-        if (gameData.saveData.busterValue[3] > 0) 
+        if (gameData.saveData.busterValue[3] > 0)
         {
             if (board.currentState == GameState.move)
             {
                 boosterType = BoosterType.TransformColorBomb;
                 gameData.saveData.busterValue[3]--;
+                gameData.Save();
                 BoosterClick();
             }
-        }        
+        }
     }
 
     public void UpdateBusterValue()

@@ -98,6 +98,7 @@ public class PauseManager : MonoBehaviour
         {
             gameData.saveData.playerHealth--;
         }
+        gameData.Save();
 
         SceneManager.LoadScene("Map");        
     }

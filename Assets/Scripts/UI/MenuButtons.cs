@@ -13,7 +13,7 @@ public class MenuButtons : MonoBehaviour
 
     void Start()
     {
-
+        gameData = FindObjectOfType<GameData>();
     }
 
     public void Settings()
@@ -28,11 +28,13 @@ public class MenuButtons : MonoBehaviour
 
     public void Wheel()
     {
+        gameData.Save();
         SceneManager.LoadScene("Wheel");
     }
 
     public void Exit()
     {
+        gameData.Save();
         Application.Quit();
     }
 }

@@ -29,20 +29,20 @@ public class SpinController : MonoBehaviour
 
     private void Update()
     {
-        if(wheelTimer.isFreeTimerActive != true)
+        if (gameData.saveData.isFreeSpinTimerActive != true)
         {
             freeSpinButton.interactable = true;
         }
-        else if (wheelTimer.isFreeTimerActive == true)
+        else
         {
             freeSpinButton.interactable = false;
         }
 
-        if (wheelTimer.isAdTimerActive != true)
+        if (gameData.saveData.isAdsSpinTimerActive != true)
         {
             adSpinButton.interactable = true;
         }
-        else if (wheelTimer.isFreeTimerActive == true)
+        else
         {
             adSpinButton.interactable = false;
         }
@@ -55,13 +55,13 @@ public class SpinController : MonoBehaviour
 
         if (coroutineAllowed)
         {
-            if(wheelTimer.isFreeTimerActive != true )
+            if (gameData.saveData.isFreeSpinTimerActive != true)
             {
                 winText.text = "";
-                wheelTimer.isFreeTimerActive = true;
-                StartCoroutine(Spin(type));                
-            }            
-        }        
+                gameData.saveData.isFreeSpinTimerActive = true;
+                StartCoroutine(Spin(type));
+            }
+        }
     }
 
     public void AdsSpinClick()
@@ -71,11 +71,11 @@ public class SpinController : MonoBehaviour
 
         if (coroutineAllowed)
         {
-            if (wheelTimer.isAdTimerActive != true)
+            if (gameData.saveData.isAdsSpinTimerActive != true)
             {
                 winText.text = "";
-                wheelTimer.isAdTimerActive = true;
-                StartCoroutine(Spin(type));                
+                gameData.saveData.isAdsSpinTimerActive = true;
+                StartCoroutine(Spin(type));
             }
         }
     }
@@ -85,13 +85,13 @@ public class SpinController : MonoBehaviour
         coroutineAllowed = false;
         randomValue = Random.Range(20, 30);
         timeInterval = 0.1f;
-        
+
 
         for (int i = 0; i < randomValue; i++)
         {
             this.transform.Rotate(0, 0, 22.5f);
 
-            if(i > Mathf.RoundToInt(randomValue * 0.5f))
+            if (i > Mathf.RoundToInt(randomValue * 0.5f))
             {
                 timeInterval = 0.2f;
             }
@@ -116,7 +116,7 @@ public class SpinController : MonoBehaviour
         Debug.Log(finalAngle);
 
         int prizeValue = Random.Range(1, 2);
-        int coinPrizeValue = Random.Range(10, 20);        
+        int coinPrizeValue = Random.Range(10, 20);
 
         switch (finalAngle)
         {
@@ -169,17 +169,20 @@ public class SpinController : MonoBehaviour
                 GivePrize(prizeValue, "Showel");
                 break;
             default:
-                winText.text = "You lose. Don't worry, try again for free";                
+                winText.text = "You lose. Don't worry, try again for free";
                 ResetTimer(type);
                 break;
         }
 
         coroutineAllowed = true;
+
+        gameData.Save();
+
     }
 
     public void ResetTimer(string buttonType)
     {
-        if(buttonType == "Free")
+        if (buttonType == "Free")
         {
             wheelTimer.ResetFreeTimer();
         }
@@ -191,7 +194,7 @@ public class SpinController : MonoBehaviour
 
     private void GivePrize(int value, string type)
     {
-        switch(type)
+        switch (type)
         {
             case "Showel":
                 gameData.saveData.busterValue[0] += value;
@@ -212,7 +215,7 @@ public class SpinController : MonoBehaviour
                 gameData.saveData.playerCoins += value;
                 break;
         }
-    }    
+    }
 
     public void ExitClick()
     {
