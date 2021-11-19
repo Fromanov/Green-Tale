@@ -26,17 +26,17 @@ MonoBehaviour:
     tileKind: 0
   - x: 0
     y: 3
-    tileKind: 1
-  - x: 0
-    y: 4
-    tileKind: 1
-  - x: 0
-    y: 5
-    tileKind: 1
-  - x: 0
-    y: 6
     tileKind: 0
   - x: 0
+    y: 4
+    tileKind: 0
+  - x: 0
+    y: 5
+    tileKind: 0
+  - x: 0
+    y: 6
+    tileKind: 0
+  - x: 0
     y: 7
     tileKind: 0
   - x: 0
@@ -97,85 +97,31 @@ MonoBehaviour:
     y: 8
     tileKind: 0
   - x: 3
-    y: 0
-    tileKind: 1
-  - x: 3
-    y: 1
-    tileKind: 0
-  - x: 3
-    y: 2
-    tileKind: 0
-  - x: 3
     y: 3
-    tileKind: 0
+    tileKind: 1
   - x: 3
     y: 4
-    tileKind: 0
+    tileKind: 1
   - x: 3
     y: 5
-    tileKind: 0
-  - x: 3
-    y: 6
-    tileKind: 0
-  - x: 3
-    y: 7
-    tileKind: 0
-  - x: 3
-    y: 8
     tileKind: 1
-  - x: 4
-    y: 0
-    tileKind: 1
-  - x: 4
-    y: 1
-    tileKind: 0
-  - x: 4
-    y: 2
-    tileKind: 0
   - x: 4
     y: 3
-    tileKind: 0
+    tileKind: 1
   - x: 4
     y: 4
-    tileKind: 0
+    tileKind: 1
   - x: 4
     y: 5
-    tileKind: 0
-  - x: 4
-    y: 6
-    tileKind: 0
-  - x: 4
-    y: 7
-    tileKind: 0
-  - x: 4
-    y: 8
     tileKind: 1
-  - x: 5
-    y: 0
-    tileKind: 1
-  - x: 5
-    y: 1
-    tileKind: 0
-  - x: 5
-    y: 2
-    tileKind: 0
   - x: 5
     y: 3
-    tileKind: 0
+    tileKind: 1
   - x: 5
     y: 4
-    tileKind: 0
+    tileKind: 1
   - x: 5
     y: 5
-    tileKind: 0
-  - x: 5
-    y: 6
-    tileKind: 0
-  - x: 5
-    y: 7
-    tileKind: 0
-  - x: 5
-    y: 8
     tileKind: 1
   - x: 6
     y: 0
@@ -242,13 +188,13 @@ MonoBehaviour:
     tileKind: 0
   - x: 8
     y: 3
-    tileKind: 1
+    tileKind: 0
   - x: 8
     y: 4
-    tileKind: 1
+    tileKind: 0
   - x: 8
     y: 5
-    tileKind: 1
+    tileKind: 0
   - x: 8
     y: 6
     tileKind: 0
@@ -275,13 +221,13 @@ MonoBehaviour:
   - numberNeeded: 0
     numberCollected: 0
     goalSprite: {fileID: 0}
-    matchValue: 0
-  - numberNeeded: 72
+    matchValue: 10
+  - numberNeeded: 54
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 4c4e5f3053e932c468f529117475b065, type: 3}
     matchValue: 8
   - numberNeeded: 0
     numberCollected: 0
     goalSprite: {fileID: 0}
-    matchValue: 0
+    matchValue: 10
   screenScaleing: 2

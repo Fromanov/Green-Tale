@@ -15,6 +15,33 @@ MonoBehaviour:
   width: 9
   height: 9
   boardLayout:
+  - x: 3
+    y: 3
+    tileKind: 1
+  - x: 3
+    y: 4
+    tileKind: 1
+  - x: 3
+    y: 5
+    tileKind: 1
+  - x: 4
+    y: 3
+    tileKind: 1
+  - x: 4
+    y: 4
+    tileKind: 1
+  - x: 4
+    y: 5
+    tileKind: 1
+  - x: 5
+    y: 3
+    tileKind: 1
+  - x: 5
+    y: 4
+    tileKind: 1
+  - x: 5
+    y: 5
+    tileKind: 1
   - x: 0
     y: 0
     tileKind: 3
@@ -24,240 +51,159 @@ MonoBehaviour:
   - x: 0
     y: 2
     tileKind: 3
+  - x: 1
+    y: 0
+    tileKind: 3
+  - x: 1
+    y: 1
+    tileKind: 3
+  - x: 1
+    y: 2
+    tileKind: 3
+  - x: 2
+    y: 0
+    tileKind: 3
+  - x: 2
+    y: 1
+    tileKind: 3
+  - x: 2
+    y: 2
+    tileKind: 3
+  - x: 3
+    y: 0
+    tileKind: 3
+  - x: 3
+    y: 1
+    tileKind: 3
+  - x: 3
+    y: 2
+    tileKind: 3
+  - x: 4
+    y: 0
+    tileKind: 3
+  - x: 4
+    y: 1
+    tileKind: 3
+  - x: 4
+    y: 2
+    tileKind: 3
+  - x: 5
+    y: 0
+    tileKind: 3
+  - x: 5
+    y: 1
+    tileKind: 3
+  - x: 5
+    y: 2
+    tileKind: 3
+  - x: 6
+    y: 0
+    tileKind: 3
+  - x: 6
+    y: 1
+    tileKind: 3
+  - x: 6
+    y: 2
+    tileKind: 3
+  - x: 7
+    y: 0
+    tileKind: 3
+  - x: 7
+    y: 1
+    tileKind: 3
+  - x: 7
+    y: 2
+    tileKind: 3
+  - x: 8
+    y: 0
+    tileKind: 3
+  - x: 8
+    y: 1
+    tileKind: 3
+  - x: 8
+    y: 2
+    tileKind: 3
   - x: 0
-    y: 3
-    tileKind: 1
-  - x: 0
-    y: 4
-    tileKind: 1
-  - x: 0
-    y: 5
-    tileKind: 1
-  - x: 0
     y: 6
     tileKind: 2
   - x: 0
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 0
     y: 8
-    tileKind: 0
-  - x: 1
-    y: 0
-    tileKind: 3
-  - x: 1
-    y: 1
-    tileKind: 3
-  - x: 1
-    y: 2
-    tileKind: 3
-  - x: 1
-    y: 3
     tileKind: 2
-  - x: 1
-    y: 4
-    tileKind: 0
-  - x: 1
-    y: 5
-    tileKind: 0
   - x: 1
     y: 6
     tileKind: 2
   - x: 1
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 1
     y: 8
-    tileKind: 0
-  - x: 2
-    y: 0
-    tileKind: 3
-  - x: 2
-    y: 1
-    tileKind: 3
-  - x: 2
-    y: 2
-    tileKind: 3
-  - x: 2
-    y: 3
     tileKind: 2
-  - x: 2
-    y: 4
-    tileKind: 0
-  - x: 2
-    y: 5
-    tileKind: 0
   - x: 2
     y: 6
     tileKind: 2
   - x: 2
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 2
     y: 8
-    tileKind: 0
-  - x: 3
-    y: 0
-    tileKind: 1
-  - x: 3
-    y: 1
-    tileKind: 0
-  - x: 3
-    y: 2
-    tileKind: 0
-  - x: 3
-    y: 3
     tileKind: 2
-  - x: 3
-    y: 4
-    tileKind: 0
-  - x: 3
-    y: 5
-    tileKind: 0
   - x: 3
     y: 6
     tileKind: 2
   - x: 3
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 3
     y: 8
-    tileKind: 1
-  - x: 4
-    y: 0
-    tileKind: 1
-  - x: 4
-    y: 1
-    tileKind: 0
-  - x: 4
-    y: 2
-    tileKind: 0
-  - x: 4
-    y: 3
     tileKind: 2
-  - x: 4
-    y: 4
-    tileKind: 0
-  - x: 4
-    y: 5
-    tileKind: 0
   - x: 4
     y: 6
     tileKind: 2
   - x: 4
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 4
     y: 8
-    tileKind: 1
-  - x: 5
-    y: 0
-    tileKind: 1
-  - x: 5
-    y: 1
-    tileKind: 0
-  - x: 5
-    y: 2
-    tileKind: 0
-  - x: 5
-    y: 3
     tileKind: 2
-  - x: 5
-    y: 4
-    tileKind: 0
-  - x: 5
-    y: 5
-    tileKind: 0
   - x: 5
     y: 6
     tileKind: 2
   - x: 5
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 5
     y: 8
-    tileKind: 1
-  - x: 6
-    y: 0
-    tileKind: 3
-  - x: 6
-    y: 1
-    tileKind: 3
-  - x: 6
-    y: 2
-    tileKind: 3
-  - x: 6
-    y: 3
     tileKind: 2
-  - x: 6
-    y: 4
-    tileKind: 0
-  - x: 6
-    y: 5
-    tileKind: 0
   - x: 6
     y: 6
     tileKind: 2
   - x: 6
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 6
     y: 8
-    tileKind: 0
-  - x: 7
-    y: 0
-    tileKind: 3
-  - x: 7
-    y: 1
-    tileKind: 3
-  - x: 7
-    y: 2
-    tileKind: 3
-  - x: 7
-    y: 3
     tileKind: 2
-  - x: 7
-    y: 4
-    tileKind: 0
-  - x: 7
-    y: 5
-    tileKind: 0
   - x: 7
     y: 6
     tileKind: 2
   - x: 7
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 7
     y: 8
-    tileKind: 0
-  - x: 8
-    y: 0
-    tileKind: 3
-  - x: 8
-    y: 1
-    tileKind: 3
-  - x: 8
-    y: 2
-    tileKind: 3
-  - x: 8
-    y: 3
-    tileKind: 1
-  - x: 8
-    y: 4
-    tileKind: 1
-  - x: 8
-    y: 5
-    tileKind: 1
+    tileKind: 2
   - x: 8
     y: 6
     tileKind: 2
   - x: 8
     y: 7
-    tileKind: 0
+    tileKind: 2
   - x: 8
     y: 8
-    tileKind: 0
+    tileKind: 2
   dots:
   - {fileID: 2415243054655310711, guid: 6660b9a9749a3e14f8c8c62276cdbb7d, type: 3}
   - {fileID: 3841113558169019448, guid: 27122edf1d506644dbb361e42ac470ae, type: 3}
@@ -272,12 +218,16 @@ MonoBehaviour:
     gameType: 0
     counterValue: 60
   levelGoals:
-  - numberNeeded: 35
+  - numberNeeded: 0
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 4c4e5f3053e932c468f529117475b065, type: 3}
-    matchValue: 8
-  - numberNeeded: 18
+    goalSprite: {fileID: 0}
+    matchValue: 10
+  - numberNeeded: 27
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: ddf4717e25a63f3469cdd411a1ea2222, type: 3}
     matchValue: 9
+  - numberNeeded: 0
+    numberCollected: 0
+    goalSprite: {fileID: 0}
+    matchValue: 10
   screenScaleing: 2

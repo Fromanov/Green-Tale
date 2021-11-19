@@ -17,22 +17,22 @@ MonoBehaviour:
   boardLayout:
   - x: 0
     y: 0
-    tileKind: 0
+    tileKind: 2
   - x: 0
     y: 1
-    tileKind: 0
+    tileKind: 2
   - x: 0
     y: 2
-    tileKind: 0
+    tileKind: 2
   - x: 0
     y: 3
-    tileKind: 1
+    tileKind: 0
   - x: 0
     y: 4
-    tileKind: 1
+    tileKind: 0
   - x: 0
     y: 5
-    tileKind: 1
+    tileKind: 0
   - x: 0
     y: 6
     tileKind: 0
@@ -44,13 +44,13 @@ MonoBehaviour:
     tileKind: 0
   - x: 1
     y: 0
-    tileKind: 0
+    tileKind: 2
   - x: 1
     y: 1
-    tileKind: 0
+    tileKind: 2
   - x: 1
     y: 2
-    tileKind: 0
+    tileKind: 2
   - x: 1
     y: 3
     tileKind: 0
@@ -71,25 +71,25 @@ MonoBehaviour:
     tileKind: 0
   - x: 2
     y: 0
-    tileKind: 0
+    tileKind: 2
   - x: 2
     y: 1
-    tileKind: 0
+    tileKind: 2
   - x: 2
     y: 2
     tileKind: 2
   - x: 2
     y: 3
-    tileKind: 3
+    tileKind: 0
   - x: 2
     y: 4
-    tileKind: 3
+    tileKind: 0
   - x: 2
     y: 5
-    tileKind: 3
+    tileKind: 0
   - x: 2
     y: 6
-    tileKind: 2
+    tileKind: 0
   - x: 2
     y: 7
     tileKind: 0
@@ -101,10 +101,10 @@ MonoBehaviour:
     tileKind: 1
   - x: 3
     y: 1
-    tileKind: 0
+    tileKind: 1
   - x: 3
     y: 2
-    tileKind: 3
+    tileKind: 1
   - x: 3
     y: 3
     tileKind: 3
@@ -119,7 +119,7 @@ MonoBehaviour:
     tileKind: 3
   - x: 3
     y: 7
-    tileKind: 0
+    tileKind: 3
   - x: 3
     y: 8
     tileKind: 1
@@ -128,10 +128,10 @@ MonoBehaviour:
     tileKind: 1
   - x: 4
     y: 1
-    tileKind: 0
+    tileKind: 1
   - x: 4
     y: 2
-    tileKind: 3
+    tileKind: 1
   - x: 4
     y: 3
     tileKind: 3
@@ -146,7 +146,7 @@ MonoBehaviour:
     tileKind: 3
   - x: 4
     y: 7
-    tileKind: 0
+    tileKind: 3
   - x: 4
     y: 8
     tileKind: 1
@@ -155,10 +155,10 @@ MonoBehaviour:
     tileKind: 1
   - x: 5
     y: 1
-    tileKind: 0
+    tileKind: 1
   - x: 5
     y: 2
-    tileKind: 3
+    tileKind: 1
   - x: 5
     y: 3
     tileKind: 3
@@ -173,32 +173,32 @@ MonoBehaviour:
     tileKind: 3
   - x: 5
     y: 7
-    tileKind: 0
+    tileKind: 3
   - x: 5
     y: 8
     tileKind: 1
   - x: 6
     y: 0
-    tileKind: 0
-  - x: 6
-    y: 1
-    tileKind: 0
-  - x: 6
-    y: 2
     tileKind: 2
   - x: 6
-    y: 3
-    tileKind: 3
-  - x: 6
-    y: 4
-    tileKind: 3
-  - x: 6
-    y: 5
-    tileKind: 3
-  - x: 6
-    y: 6
+    y: 1
     tileKind: 2
   - x: 6
+    y: 2
+    tileKind: 2
+  - x: 6
+    y: 3
+    tileKind: 0
+  - x: 6
+    y: 4
+    tileKind: 0
+  - x: 6
+    y: 5
+    tileKind: 0
+  - x: 6
+    y: 6
+    tileKind: 0
+  - x: 6
     y: 7
     tileKind: 0
   - x: 6
@@ -206,13 +206,13 @@ MonoBehaviour:
     tileKind: 0
   - x: 7
     y: 0
-    tileKind: 0
+    tileKind: 2
   - x: 7
     y: 1
-    tileKind: 0
+    tileKind: 2
   - x: 7
     y: 2
-    tileKind: 0
+    tileKind: 2
   - x: 7
     y: 3
     tileKind: 0
@@ -233,22 +233,22 @@ MonoBehaviour:
     tileKind: 0
   - x: 8
     y: 0
-    tileKind: 0
+    tileKind: 2
   - x: 8
     y: 1
-    tileKind: 0
+    tileKind: 2
   - x: 8
     y: 2
-    tileKind: 0
+    tileKind: 2
   - x: 8
     y: 3
-    tileKind: 1
+    tileKind: 0
   - x: 8
     y: 4
-    tileKind: 1
+    tileKind: 0
   - x: 8
     y: 5
-    tileKind: 1
+    tileKind: 0
   - x: 8
     y: 6
     tileKind: 0
@@ -267,16 +267,16 @@ MonoBehaviour:
   - {fileID: 7429344525052600734, guid: bad1a2a6445f6554aa4138612aa46035, type: 3}
   - {fileID: 7429344525052600734, guid: ae8e41e05f7ba7342a4d09dedbb0e0bb, type: 3}
   - {fileID: 5511406647067189191, guid: f4e149612c5abe2448559c7db257da92, type: 3}
-  scoreGoals: 64000000fa000000f4010000
+  scoreGoals: 64000000fa000000f4010000f4010000f4010000f4010000
   requirments:
     gameType: 0
-    counterValue: 80
+    counterValue: 60
   levelGoals:
-  - numberNeeded: 49
+  - numberNeeded: 36
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 4c4e5f3053e932c468f529117475b065, type: 3}
     matchValue: 8
-  - numberNeeded: 21
+  - numberNeeded: 15
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 731a6aa73262b6448b330d3924a98844, type: 3}
     matchValue: 9

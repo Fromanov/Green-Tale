@@ -15,54 +15,6 @@ MonoBehaviour:
   width: 9
   height: 9
   boardLayout:
-  - x: 0
-    y: 4
-    tileKind: 3
-  - x: 1
-    y: 3
-    tileKind: 3
-  - x: 2
-    y: 2
-    tileKind: 3
-  - x: 3
-    y: 1
-    tileKind: 3
-  - x: 4
-    y: 0
-    tileKind: 3
-  - x: 5
-    y: 1
-    tileKind: 3
-  - x: 6
-    y: 2
-    tileKind: 3
-  - x: 7
-    y: 3
-    tileKind: 3
-  - x: 8
-    y: 4
-    tileKind: 3
-  - x: 1
-    y: 5
-    tileKind: 2
-  - x: 2
-    y: 6
-    tileKind: 2
-  - x: 3
-    y: 7
-    tileKind: 2
-  - x: 4
-    y: 8
-    tileKind: 2
-  - x: 5
-    y: 7
-    tileKind: 2
-  - x: 6
-    y: 6
-    tileKind: 2
-  - x: 7
-    y: 5
-    tileKind: 2
   - x: 3
     y: 3
     tileKind: 1
@@ -90,6 +42,60 @@ MonoBehaviour:
   - x: 5
     y: 5
     tileKind: 1
+  - x: 2
+    y: 0
+    tileKind: 3
+  - x: 2
+    y: 1
+    tileKind: 3
+  - x: 2
+    y: 2
+    tileKind: 3
+  - x: 2
+    y: 3
+    tileKind: 3
+  - x: 2
+    y: 4
+    tileKind: 3
+  - x: 2
+    y: 5
+    tileKind: 3
+  - x: 2
+    y: 6
+    tileKind: 3
+  - x: 2
+    y: 7
+    tileKind: 3
+  - x: 2
+    y: 8
+    tileKind: 3
+  - x: 6
+    y: 0
+    tileKind: 3
+  - x: 6
+    y: 1
+    tileKind: 3
+  - x: 6
+    y: 2
+    tileKind: 3
+  - x: 6
+    y: 3
+    tileKind: 3
+  - x: 6
+    y: 4
+    tileKind: 3
+  - x: 6
+    y: 5
+    tileKind: 3
+  - x: 6
+    y: 6
+    tileKind: 3
+  - x: 6
+    y: 7
+    tileKind: 3
+  - x: 6
+    y: 8
+    tileKind: 3
   - x: 0
     y: 0
     tileKind: 0
@@ -101,6 +107,9 @@ MonoBehaviour:
     tileKind: 0
   - x: 0
     y: 3
+    tileKind: 0
+  - x: 0
+    y: 4
     tileKind: 0
   - x: 0
     y: 5
@@ -115,16 +124,22 @@ MonoBehaviour:
     y: 8
     tileKind: 0
   - x: 1
+    y: 0
+    tileKind: 0
+  - x: 1
     y: 1
     tileKind: 0
   - x: 1
     y: 2
     tileKind: 0
   - x: 1
-    y: 0
+    y: 3
     tileKind: 0
   - x: 1
-    y: 8
+    y: 4
+    tileKind: 0
+  - x: 1
+    y: 5
     tileKind: 0
   - x: 1
     y: 6
@@ -132,40 +147,61 @@ MonoBehaviour:
   - x: 1
     y: 7
     tileKind: 0
-  - x: 2
-    y: 1
-    tileKind: 0
-  - x: 2
-    y: 0
-    tileKind: 0
-  - x: 2
-    y: 7
-    tileKind: 0
-  - x: 2
+  - x: 1
     y: 8
     tileKind: 0
   - x: 3
     y: 0
     tileKind: 0
   - x: 3
-    y: 8
-    tileKind: 0
-  - x: 5
-    y: 0
-    tileKind: 0
-  - x: 5
-    y: 8
-    tileKind: 0
-  - x: 6
-    y: 0
-    tileKind: 0
-  - x: 6
     y: 1
     tileKind: 0
-  - x: 6
+  - x: 3
+    y: 2
+    tileKind: 0
+  - x: 3
+    y: 6
+    tileKind: 0
+  - x: 3
     y: 7
     tileKind: 0
-  - x: 6
+  - x: 3
+    y: 8
+    tileKind: 0
+  - x: 4
+    y: 0
+    tileKind: 0
+  - x: 4
+    y: 1
+    tileKind: 0
+  - x: 4
+    y: 2
+    tileKind: 0
+  - x: 4
+    y: 6
+    tileKind: 0
+  - x: 4
+    y: 7
+    tileKind: 0
+  - x: 4
+    y: 8
+    tileKind: 0
+  - x: 5
+    y: 0
+    tileKind: 0
+  - x: 5
+    y: 1
+    tileKind: 0
+  - x: 5
+    y: 2
+    tileKind: 0
+  - x: 5
+    y: 6
+    tileKind: 0
+  - x: 5
+    y: 7
+    tileKind: 0
+  - x: 5
     y: 8
     tileKind: 0
   - x: 7
@@ -176,6 +212,15 @@ MonoBehaviour:
     tileKind: 0
   - x: 7
     y: 2
+    tileKind: 0
+  - x: 7
+    y: 3
+    tileKind: 0
+  - x: 7
+    y: 4
+    tileKind: 0
+  - x: 7
+    y: 5
     tileKind: 0
   - x: 7
     y: 6
@@ -197,6 +242,9 @@ MonoBehaviour:
     tileKind: 0
   - x: 8
     y: 3
+    tileKind: 0
+  - x: 8
+    y: 4
     tileKind: 0
   - x: 8
     y: 5
@@ -224,12 +272,12 @@ MonoBehaviour:
     gameType: 0
     counterValue: 60
   levelGoals:
-  - numberNeeded: 40
-    numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 4c4e5f3053e932c468f529117475b065, type: 3}
-    matchValue: 8
-  - numberNeeded: 9
+  - numberNeeded: 18
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 731a6aa73262b6448b330d3924a98844, type: 3}
     matchValue: 9
+  - numberNeeded: 54
+    numberCollected: 0
+    goalSprite: {fileID: 21300000, guid: 4c4e5f3053e932c468f529117475b065, type: 3}
+    matchValue: 8
   screenScaleing: 2
