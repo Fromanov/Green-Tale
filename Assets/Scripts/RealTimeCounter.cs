@@ -6,13 +6,9 @@ using UnityEngine;
 public class RealTimeCounter : MonoBehaviour
 {
     public static RealTimeCounter realTimeCounter;
-    public float freeSpinTimer;
-    public float adSpinTimer;    
-
-    public bool isFreeTimerActive;
-    public bool isAdTimerActive;
 
     private float twelveHoursTimer = 43200;
+    private float secondsInFiveMinutes = 300;
     private GameData gameData;
 
     public void Awake()
@@ -33,36 +29,36 @@ public class RealTimeCounter : MonoBehaviour
     }
 
     public void Load()
-    {        
+    {
         TimeSpan timeNow = DateTime.Now.TimeOfDay;
         TimeSpan timeLeft = timeNow - gameData.saveData.timeOld;
 
         Debug.Log("Time old " + gameData.saveData.timeOld);
-        Debug.Log("Time past " + timeLeft);        
-        
+        Debug.Log("Time past " + timeLeft);
+
 
         if (gameData.saveData.isFreeSpinTimerActive)
         {
-            isFreeTimerActive = true;
+            gameData.saveData.isFreeSpinTimerActive = true;
 
             if ((float)(timeLeft.TotalSeconds) >= gameData.saveData.freeSpinTimer)
             {
                 ResetFreeTimer();
             }
-            else 
+            else
             {
-                freeSpinTimer = gameData.saveData.freeSpinTimer - (float)(timeLeft.TotalSeconds);
+                gameData.saveData.freeSpinTimer -= (float)(timeLeft.TotalSeconds);
             }
-            
+
         }
         else
-        {            
+        {
             ResetFreeTimer();
         }
 
         if (gameData.saveData.isAdsSpinTimerActive)
         {
-            isAdTimerActive = true;
+            gameData.saveData.isAdsSpinTimerActive = true;
 
             if ((float)(timeLeft.TotalSeconds) >= gameData.saveData.adsSpinTimer)
             {
@@ -70,39 +66,57 @@ public class RealTimeCounter : MonoBehaviour
             }
             else
             {
-                adSpinTimer = gameData.saveData.adsSpinTimer - (float)(timeLeft.TotalSeconds);
-            }            
+                gameData.saveData.adsSpinTimer -= (float)(timeLeft.TotalSeconds);
+            }
         }
         else
         {
             ResetAdTimer();
         }
+
+        if (gameData.saveData.isHealthTimerActive)
+        {
+            if (gameData.saveData.playerHealth < 5)
+            {
+                if ((float)(timeLeft.TotalSeconds) >= gameData.saveData.healthTimer)
+                {
+                    gameData.saveData.playerHealth += 1 + (int)((float)(timeLeft.TotalSeconds) - gameData.saveData.healthTimer) / (int)secondsInFiveMinutes;
+                    if (gameData.saveData.playerHealth >= 5)
+                    {
+                        gameData.saveData.playerHealth = 5;
+                        gameData.saveData.isHealthTimerActive = false;
+                    }
+
+                }
+            }
+            else
+            {
+                gameData.saveData.healthTimer -= (float)(timeLeft.TotalSeconds);
+            }
+        }
     }
 
     private void Update()
     {
-        TimeSpan currFreeTimer = TimeSpan.FromSeconds(Mathf.Round(freeSpinTimer));
-        TimeSpan currAdTimer = TimeSpan.FromSeconds(Mathf.Round(adSpinTimer));
-
-        if (isFreeTimerActive)
+        if (gameData.saveData.isFreeSpinTimerActive)
         {
-            if (freeSpinTimer > 0)
+            if (gameData.saveData.freeSpinTimer > 0)
             {
-                freeSpinTimer -= Time.deltaTime;
+                gameData.saveData.freeSpinTimer -= Time.deltaTime;
             }
-            else if (freeSpinTimer <= 0)
+            else if (gameData.saveData.freeSpinTimer <= 0)
             {
                 ResetFreeTimer();
             }
         }
 
-        if (isAdTimerActive)
+        if (gameData.saveData.isAdsSpinTimerActive)
         {
-            if (adSpinTimer > 0)
+            if (gameData.saveData.adsSpinTimer > 0)
             {
-                adSpinTimer -= Time.deltaTime;
+                gameData.saveData.adsSpinTimer -= Time.deltaTime;
             }
-            else if (adSpinTimer <= 0)
+            else if (gameData.saveData.adsSpinTimer <= 0)
             {
                 ResetAdTimer();
             }
@@ -111,34 +125,28 @@ public class RealTimeCounter : MonoBehaviour
 
     public void SaveDate()
     {
-        gameData.saveData.isFreeSpinTimerActive = isFreeTimerActive;
-        gameData.saveData.isAdsSpinTimerActive = isAdTimerActive;
-
-        gameData.saveData.freeSpinTimer = freeSpinTimer;
-        gameData.saveData.adsSpinTimer = adSpinTimer;
-
         gameData.saveData.timeOld = DateTime.Now.TimeOfDay;
     }
 
     public void ActivateFreeSpinTimer()
     {
-        isFreeTimerActive = true;
+        gameData.saveData.isFreeSpinTimerActive = true;
     }
     public void ActivateAdSpinTimer()
     {
-        isAdTimerActive = true;
-    }    
+        gameData.saveData.isAdsSpinTimerActive = true;
+    }
 
     public void ResetFreeTimer()
     {
-        isFreeTimerActive = false;
-        freeSpinTimer = twelveHoursTimer;
+        gameData.saveData.isFreeSpinTimerActive = false;
+        gameData.saveData.freeSpinTimer = twelveHoursTimer;
     }
 
     public void ResetAdTimer()
     {
-        isAdTimerActive = false;
-        adSpinTimer = twelveHoursTimer;
+        gameData.saveData.isAdsSpinTimerActive = false;
+        gameData.saveData.adsSpinTimer = twelveHoursTimer;
     }
 
     private void OnApplicationQuit()

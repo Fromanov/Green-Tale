@@ -24,6 +24,7 @@ public class BackToMap : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         gameData.saveData.playerHealth--;
+        gameData.Save();
         SceneManager.LoadScene(scene.name);
     }
 

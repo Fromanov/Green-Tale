@@ -15,7 +15,7 @@ public class SaveData
 
     [Header("Player")]
     public int playerHealth;
-    public int playerCoins;     
+    public int playerCoins;
 
     [Header("Timers")]
     public TimeSpan timeOld;
@@ -27,7 +27,7 @@ public class SaveData
 
     public float healthTimer;
     public bool isHealthTimerActive = false;
-    public float secondsInFiveMinets = 300;    
+    public float secondsInFiveMinets = 300;
 
     [Header("Busters")]
 
@@ -41,7 +41,7 @@ public class GameData : MonoBehaviour
 
     void Awake()
     {
-        if(gameData == null)
+        if (gameData == null)
         {
             DontDestroyOnLoad(this.gameObject);
             gameData = this;
@@ -51,20 +51,16 @@ public class GameData : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        saveData.secondsInFiveMinets = 300;
-
         Load();
     }
 
     void Start()
     {
-        
+
     }
 
     private void Update()
     {
-        TimeSpan currHealthTimer = TimeSpan.FromSeconds(Mathf.Round(saveData.healthTimer));
-        
         if (saveData.isHealthTimerActive)
         {
             if (saveData.healthTimer > 0)
@@ -74,11 +70,12 @@ public class GameData : MonoBehaviour
             else if (saveData.healthTimer <= 0)
             {
                 saveData.playerHealth++;
+                gameData.Save();
                 ResetHealthTimer();
             }
         }
 
-        if(saveData.playerHealth < 5)
+        if (saveData.playerHealth < 5)
         {
             StartPlayerHealthTimer();
         }
@@ -97,33 +94,24 @@ public class GameData : MonoBehaviour
 
     public void Save()
     {
+        saveData.timeOld = DateTime.Now.TimeOfDay;
+
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Create);
         SaveData data = new SaveData();
         data = saveData;
-        data.playerHealth += 500;
         formatter.Serialize(file, data);
-        file.Close();        
+        file.Close();
     }
 
     public void Load()
     {
-        if(File.Exists(Application.persistentDataPath + "/player.dat"))
+        if (File.Exists(Application.persistentDataPath + "/player.dat"))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Open);
             saveData = formatter.Deserialize(file) as SaveData;
             file.Close();
         }
-    }
-
-    private void OnApplicationQuit()
-    {
-        Save();
-    }
-
-    private void OnDisable()
-    {
-        Save();
     }
 }

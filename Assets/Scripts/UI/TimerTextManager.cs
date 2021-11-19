@@ -10,24 +10,24 @@ public class TimerTextManager : MonoBehaviour
     public TMP_Text freeSpinTimerText;
     public TMP_Text adSpinTimerText;
 
-    private RealTimeCounter realTimer;
+    private GameData gameData;
 
     void Start()
     {
-        realTimer = FindObjectOfType<RealTimeCounter>();
+        gameData = FindObjectOfType<GameData>();
     }
-    
+
     void Update()
     {
-        freeSpinTimerText.text = TimeSpan.FromSeconds(Mathf.Round(realTimer.freeSpinTimer)).ToString();
-        adSpinTimerText.text = TimeSpan.FromSeconds(Mathf.Round(realTimer.adSpinTimer)).ToString();
+        freeSpinTimerText.text = TimeSpan.FromSeconds(Mathf.Round(gameData.saveData.freeSpinTimer)).ToString();
+        adSpinTimerText.text = TimeSpan.FromSeconds(Mathf.Round(gameData.saveData.adsSpinTimer)).ToString();
 
-        if(realTimer.isFreeTimerActive == false)
+        if (gameData.saveData.isFreeSpinTimerActive == false)
         {
             freeSpinTimerText.text = "";
         }
 
-        if (realTimer.isAdTimerActive == false)
+        if (gameData.saveData.isAdsSpinTimerActive == false)
         {
             adSpinTimerText.text = "";
         }

@@ -33,6 +33,7 @@ public class ShopButton : ShopItem
         {
             gameData.saveData.playerCoins -= shopItemCost;
             gameData.saveData.busterValue[(int)busterType] += shopItemValue;
+            gameData.Save();
         }
     }    
 }
